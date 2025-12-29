@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    name: nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      imagePullPolicy: Always
+  nodeSelector:
+    distype: ssd
+  tolerations:
+    - key: "key1"
+      operator: "Equal"
+      value: "value1"
+      effect: "NoSchedule"
+    - key: "key2"
+      operator: "Equal"
+      value: "value2"
+      effect: "PreferNoSchedule"
+    - key: "key3"
+      operator: "Equal"
+      value: "value3"
+      effect: "NoExecute"
