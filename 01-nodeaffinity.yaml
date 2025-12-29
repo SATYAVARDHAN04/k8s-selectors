@@ -15,7 +15,7 @@ spec:
         nodeSelectorTerms:
           - matchExpressions:
               - key: distype
-                operator: Equal
+                operator: In
                 values:
                   - ssd
       preferredDuringSchedulingIgnoredDuringExecution:
