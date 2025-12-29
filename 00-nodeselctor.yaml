@@ -5,9 +5,9 @@ metadata:
   labels:
     name: nginx
 spec:
+  nodeSelector:
+    distype: ssd
   containers:
     - name: nginx
       image: nginx
       imagePullPolicy: Always
-  nodeSelector:
-    distype: ssd
